@@ -1,0 +1,36 @@
+<div class="row" style="margin: 0;padding: 0;">
+    <div class="col-md-8 d-md-block d-none" style="margin: 0;padding:0">
+        <img src="https://relevantz.com/wp-content/uploads/2022/04/OFS-is-now-Relevantz.jpg" alt="Background"
+            style="object-fit: fill;height: 100vh;width: 100%">
+    </div>
+    <div class="col-md-4 col-12  bg-container">
+        <div class="body">
+            <span class="title">Login Form</span>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3 form-box ">
+                    <label for="email">Email <span id="required-field"> * </span></label>
+                    <input id="email" type="email" formControlName="email" class="form-control"
+                        placeholder="Enter the email " required>
+                    <span *ngIf="isEmailInvalid()" class="error-message">
+                        {{ getEmailErrorMessage('email') }}
+                    </span>
+                </div>
+                <div class="mb-3">
+                    <label for="password">Password <span id="required-field">*</span></label>
+                    <div class="password-input-container">
+                        <input id="password" [type]="passwordHidden ? 'password' : 'text'" formControlName="password"
+                            class="form-control" placeholder="Enter the password" required>
+                        <span (click)="togglePasswordVisibility()" class="eye-icon">👁️</span>
+                    </div>
+
+                    <span *ngIf="isPasswordInvalid()"
+                        class="error-message">{{getPasswordErrorMessage('password')}}</span>
+                </div>
+
+                <div class="submit">
+                    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

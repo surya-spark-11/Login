@@ -1,0 +1,173 @@
+.password-input-container {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: no-drop;
+}
+
+#required-field,
+#required-field-note {
+  color: red;
+}
+
+#required-field-note {
+  font-size: smaller;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.bg-container {
+  background-color: #26245d;
+  height: 100vh; 
+}
+
+.success-msg{
+  color: green;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+label {
+  color: aqua;
+  font-size: 16px;
+}
+
+input {
+  background-color: #e7ddea;
+  color: #26245d;
+  border: 1px solid #54255d;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+
+  background-color: antiquewhite;
+  color: black;
+  border: none;
+  width: 150px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+button[type="submit"]:hover {
+  background-color: #f707a7;
+
+}
+
+button[type="submit"]:focus {
+  transition: all;
+}
+
+.invalid {
+  color: #f70707;
+}
+
+.invalid-feedback {
+  color: #f70707;
+}
+
+.title {
+  font-size: 32px;
+  color: wheat;
+  text-align: center;
+}
+
+.card-box {
+  margin-top: 70px;
+}
+
+.form-box {
+  margin-top: 20px;
+}
+
+
+/*Large Screens*/
+@media screen and (min-width: 1024px) {
+  .total {
+    background-size: cover;
+    height: 500px;
+  }
+
+  .body {
+    margin-top: 150px;
+    margin-right: 40px;
+  }
+}
+
+/* For tablets: */
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .image-up {
+    height: 400px;
+  }
+
+  .body {
+    margin-top: 150px;
+    margin-right: 30px;
+  }
+}
+
+/*Small Screens*/
+@media screen and(min-width:320px) {
+  .total {
+    width: 90%;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .title {
+    font-size: 32px;
+    color: wheat;
+    text-align: center;
+  }
+
+  .card-box {
+    margin-top: 100px;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-top: 50%;
+    padding: 15%;
+  }
+
+  .row {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    
+  }
+
+}
+
+/* For Mobile small screen to large screen  */
+@media screen and (max-width: 768px) {
+  .body {
+      margin-top: 10%;
+  }
+}

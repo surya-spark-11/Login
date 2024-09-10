@@ -1,0 +1,13 @@
+.image-up {
+   width: 100%;
+   height: auto;
+   background-size:contain;
+   
+}
+.img-fluid{
+    background-position:center;
+    background-size:cover;
+}
+.bg-color{
+    background-color: #26245d;
+}
